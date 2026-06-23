@@ -2,7 +2,7 @@
 // Example file for manipulating string content
 
 string str1 = "The quick brown fox jumps over the lazy dog.";
-string str2 = "This is a string";
+string str2 = "bThis is a string";
 string str3 = "THIS is a STRING";
 string[] strs = {"one", "two", "three", "four"};
 
@@ -27,19 +27,20 @@ string[] strs = {"one", "two", "three", "four"};
 // TODO: String Concatenation         
 // string outstr;
 // outstr = String.Concat(strs);
+// Console.WriteLine($"{String.Concat(strs)}");
 
 
 // TODO: Joining strings together with Join
 // outstr = String.Join('.', strs);
-// Console.WriteLine(outstr);
+// Console.WriteLine(String.Join('.', strs));
 // outstr = String.Join("---", strs);
 // Console.WriteLine(outstr);
 
 // TODO: String Comparison
 
 // Equals just returns a regular Boolean
-bool isEqual = str2.Equals(str3);
-Console.WriteLine($"{isEqual}"); //false
+// bool isEqual = str2.Equals(str3);
+// Console.WriteLine($"{isEqual}"); //false
 
 // Compare will perform an ordinal comparison and return:
 // < 0 : first string comes before second in sort order
@@ -49,6 +50,37 @@ Console.WriteLine($"{isEqual}"); //false
 // Console.WriteLine($"{result}");
 
 
-// TODO: Replacing content
-string outstr = str1.Replace("fox", "cat");
-Console.WriteLine(outstr);
+// // TODO: Replacing content
+// string outstr = str1.Replace("fox", "cat");
+// Console.WriteLine(str1.Replace("fox", "fish"));
+
+// DateTime date = new DateTime(2020, 4, 20);
+
+// string dateyear = date.ToString("yyyy");
+
+// Console.WriteLine(dateyear);
+
+// using System.Net.WebSockets;
+
+string FormatDateTime(DateTime the_date) {
+        // Your code goes here
+        string dateYear = the_date.ToString("yyyy");
+        string dateMonth = the_date.ToString("MM");
+        string dateDay = the_date.ToString("dd");
+
+        Console.WriteLine($"{dateYear}, {dateMonth[1].ToString()}, {dateDay[1].ToString()}");
+
+        if (dateMonth[0].ToString() == "0")
+        {
+            dateMonth = dateMonth[1].ToString();
+        }
+        if (dateDay[0].ToString() == "0")
+        {
+            dateDay = dateDay[1].ToString();
+        }
+        
+        return $"{dateYear}--{dateMonth}--{dateDay}";
+    }
+
+DateTime test_date = new DateTime(2030, 4, 1);
+// Console.WriteLine(FormatDateTime(test_date));

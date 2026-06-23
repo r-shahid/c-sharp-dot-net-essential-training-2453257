@@ -29,4 +29,5 @@ string str2 = "   ";
 string str3 = String.Empty;
 Console.WriteLine($"{String.IsNullOrEmpty(str1)}");
 Console.WriteLine($"{String.IsNullOrEmpty(str3)}");
+Console.WriteLine($"{String.IsNullOrEmpty(str2)}");
 Console.WriteLine($"{String.IsNullOrWhiteSpace(str2)}");
